@@ -30,7 +30,7 @@ public class Details extends Activity {
 	
 	public void update(View view){
 		
-		finish();
+		this.finish();
 	}
 
 
@@ -41,7 +41,7 @@ public class Details extends Activity {
 		Intent intent = new Intent();
 		intent.putExtra("view",eText1.getText().toString());
 		intent.putExtra("pos",pos);
-		setResult(RESULT_OK, intent);		
+		setResult(10, intent);		
 		super.finish();
 	}
 

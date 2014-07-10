@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 	ListView lv ;
 	
 	ArrayList<String> data;
-	ArrayAdapter aa;
+	ArrayAdapter<String> aa;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 				
 				i.putExtra("viewKey", s);
 				i.putExtra("for",position);
-				startActivityForResult(i, RESULT_OK);
+				startActivityForResult(i, 10);
 				
 			}
 		});		
@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
 
 	String s=data.getExtras().getString("view");
 	int i=data.getExtras().getInt("pos");
-	this.data.add(i,s);
+	this.data.set(i,s);
 	aa.notifyDataSetChanged();
 	super.onActivityResult(requestCode, resultCode, data);		
 		
