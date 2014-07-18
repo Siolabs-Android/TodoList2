@@ -1,22 +1,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context="${relativePackage}.${activityClass}" >
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.16" >
+        android:layout_height="66dp" >
 
         <EditText
             android:id="@+id/editText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:ems="10" >
 
             <requestFocus />
@@ -24,19 +21,25 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/addBtn" 
             android:onClick="addToList"
-            />
+            android:text="@string/addBtn" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/categories" />
 
     </LinearLayout>
+
         <ListView
-        android:id="@+id/listView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" >
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
     </ListView>
 
 </LinearLayout>
